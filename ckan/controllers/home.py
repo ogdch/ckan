@@ -63,10 +63,13 @@ class HomeController(base.BaseController):
 
             c.search_facets = query['search_facets']
 
-            c.facet_titles = {'groups': _('Groups'),
-                          'tags': _('Tags'),
-                          'res_format': _('Formats'),
-                          'license': _('Licence'), }
+            c.facet_titles = {
+                'organization': _('Organizations'),
+                'groups': _('Groups'),
+                'tags': _('Tags'),
+                'res_format': _('Formats'),
+                'license': _('License'),
+            }
 
             data_dict = {'sort': 'packages', 'all_fields': 1}
             # only give the terms to group dictize that are returned in the
